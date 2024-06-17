@@ -1,0 +1,54 @@
+.header {
+  height: 32vw; /* Keep this if you need it to be responsive based on viewport width */
+  margin: 30px auto;
+  background: url("/header-image.png") no-repeat;
+  background-size: cover; /* Ensures the image covers the entire header */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header button {
+  /* text-align: center; */
+  top: 89%;
+  font-size: max(1vw, 13px);
+  font-weight: 500;
+  padding: 0vw 2.3vw;
+  position: absolute;
+  bottom: 4%;
+  left: 29%;
+  border: none;
+  border-radius: 15px;
+  color: orange;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1050px) {
+  .header {
+    height: 38vw;
+  }
+  .button {
+    max-width: 35%;
+  }
+}
+
+@media (max-width: 750px) {
+  .button {
+    padding: 2vw 4vw;
+    max-width: 30%;
+  }
+}
